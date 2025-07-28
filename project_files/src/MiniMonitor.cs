@@ -12,7 +12,7 @@ namespace VNyan_MiniMonitor
     class MiniMonitorManifest : IVNyanPluginManifest
     {
         public string PluginName { get; } = "Mini Monitor";
-        public string Version { get; } = "1.0";
+        public string Version { get; } = "1.1";
         public string Title { get; } = "Mini Monitor";
         public string Author { get; } = "lunazera";
         public string Website { get; } = "https://github.com/Lunazera/MiniMonitor";
@@ -33,11 +33,6 @@ namespace VNyan_MiniMonitor
                 return VNyanInterface.VNyanInterface.VNyanParameter.getVNyanParameterFloat(currentParameterName);
             }
             return 0f;
-        }
-
-        void Update()
-        {
-
         }
     }
 }
