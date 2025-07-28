@@ -15,7 +15,7 @@ namespace VNyan_MiniMonitor
         public string Version { get; } = "1.0";
         public string Title { get; } = "Mini Monitor";
         public string Author { get; } = "lunazera";
-        public string Website { get; } = "https://github.com/Lunazera/";
+        public string Website { get; } = "https://github.com/Lunazera/MiniMonitor";
         public void InitializePlugin()
         {
         }
