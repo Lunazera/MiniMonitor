@@ -17,7 +17,7 @@ namespace LZUI
         void Start()
         {
             changeThemeSettings();
-            VNyanInterface.VNyanInterface.VNyanUI.colorThemeChanged += getChangeThemeSettings(); // Re-init colors when this event fires
+            VNyanInterface.VNyanInterface.VNyanUI.colorThemeChanged += changeThemeSettings; // Re-init colors when this event fires
         }
 
         void Update()
@@ -28,12 +28,6 @@ namespace LZUI
         public void changeThemeSettings()
         {
             parameterValueText.GetComponent<Text>().color = LZ_UI.hexToColor(VNyanInterface.VNyanInterface.VNyanUI.getCurrentThemeColor(ThemeComponent.Text));
-        }
-
-        // set up system action to handle theme change event
-        public Action getChangeThemeSettings()
-        {
-            return changeThemeSettings;
         }
     }
 }

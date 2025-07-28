@@ -19,7 +19,7 @@ namespace LZUI
             closeButton.onClick.AddListener(delegate { CloseButtonClicked(); });
 
             changeThemeSettings();
-            VNyanInterface.VNyanInterface.VNyanUI.colorThemeChanged += getChangeThemeSettings(); // Re-init colors when this event fires
+            VNyanInterface.VNyanInterface.VNyanUI.colorThemeChanged += changeThemeSettings; // Re-init colors when this event fires
         }
 
         public void CloseButtonClicked()
@@ -32,11 +32,6 @@ namespace LZUI
             closeButton.GetComponent<Image>().color = LZ_UI.hexToColor(VNyanInterface.VNyanInterface.VNyanUI.getCurrentThemeColor(ThemeComponent.Panel));
             closeButton.GetComponent<Outline>().effectColor = LZ_UI.hexToColor(VNyanInterface.VNyanInterface.VNyanUI.getCurrentThemeColor(ThemeComponent.Borders));
             closeButton.GetComponentInChildren<Text>().color = LZ_UI.hexToColor(VNyanInterface.VNyanInterface.VNyanUI.getCurrentThemeColor(ThemeComponent.Text));
-        }
-
-        public Action getChangeThemeSettings()
-        {
-            return changeThemeSettings;
         }
     }
 }

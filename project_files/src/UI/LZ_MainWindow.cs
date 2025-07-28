@@ -25,7 +25,7 @@ namespace LZUI
             mainRect = GetComponent(typeof(RectTransform)) as RectTransform;
             
             changeThemeSettings();
-            VNyanInterface.VNyanInterface.VNyanUI.colorThemeChanged += getChangeThemeSettings(); // Re-init colors when this event fires
+            VNyanInterface.VNyanInterface.VNyanUI.colorThemeChanged += changeThemeSettings; // Re-init colors when this event fires
         }
 
         public void changeThemeSettings()
@@ -35,11 +35,6 @@ namespace LZUI
             BackgroundObject.GetComponent<Outline>().effectColor = LZ_UI.hexToColor(VNyanInterface.VNyanInterface.VNyanUI.getCurrentThemeColor(ThemeComponent.Borders));
             Title.GetComponent<Text>().color = LZ_UI.hexToColor(VNyanInterface.VNyanInterface.VNyanUI.getCurrentThemeColor(ThemeComponent.Text));
             version.GetComponent<Text>().color = LZ_UI.hexToColor(VNyanInterface.VNyanInterface.VNyanUI.getCurrentThemeColor(ThemeComponent.Text));
-        }
-
-        public Action getChangeThemeSettings()
-        {
-            return changeThemeSettings;
         }
 
         public void OnDrag(PointerEventData eventData)
