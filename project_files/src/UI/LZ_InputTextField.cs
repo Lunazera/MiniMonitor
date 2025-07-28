@@ -27,6 +27,7 @@ namespace LZUI
             mainButtonText = mainButton.GetComponentInChildren<Text>();
 
             changeThemeSettings();
+            VNyanInterface.VNyanInterface.VNyanUI.colorThemeChanged += getChangeThemeSettings(); // Re-init colors when this event fires
 
             // We add a listener that will run ButtonPressCheck if the button is pressed.
             mainButton.onClick.AddListener(delegate { ButtonPressCheck(); });
@@ -41,6 +42,13 @@ namespace LZUI
             mainButton.GetComponent<Image>().color = LZ_UI.hexToColor(VNyanInterface.VNyanInterface.VNyanUI.getCurrentThemeColor(ThemeComponent.Button));
             mainButtonText.GetComponent<Text>().color = LZ_UI.hexToColor(VNyanInterface.VNyanInterface.VNyanUI.getCurrentThemeColor(ThemeComponent.ButtonText));
         }
+
+        // set up system action to handle theme change event
+        public Action getChangeThemeSettings()
+        {
+            return changeThemeSettings;
+        }
+
 
         public void ButtonPressCheck()
         {
