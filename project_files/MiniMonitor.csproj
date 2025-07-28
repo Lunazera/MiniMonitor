@@ -12,13 +12,13 @@
 
   <ItemGroup>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\vnyan\VNyan_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>..\..\..\vnyan\VNyan_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>..\..\vnyan\VNyan_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <HintPath>..\..\..\vnyan\VNyan_Data\Managed\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="VNyanInterface">
-      <HintPath>..\..\vnyan\VNyan_Data\Managed\VNyanInterface.dll</HintPath>
+      <HintPath>..\..\..\vnyan\VNyan_Data\Managed\VNyanInterface.dll</HintPath>
     </Reference>
   </ItemGroup>
 
